@@ -7,11 +7,15 @@ namespace ChuckNorrisJokesApp.Services
 {
     public class ConfigurationService : IConfigurationService
     {
+      
+    
         public string ChuckNorrisApiUrl { get; }
+        public string DadJokeApiUrl { get; set; }
 
-        public ConfigurationService ()
+        public ConfigurationService()
         {
             ChuckNorrisApiUrl = "https://api.chucknorris.io/jokes/random";
+            DadJokeApiUrl = "https://icanhazdadjoke.com/";
         }
     }
 }

@@ -6,9 +6,16 @@
     xmlns:views="clr-namespace:ChuckNorrisJokesApp.Views"
     Title="ChuckNorrisJokesApp">
 
+    <TabBar>
+        <ShellContent
+    Title="Chuck Norris"
+    ContentTemplate="{DataTemplate views:JokesView}"
+    Route="JokesView" />
+
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:JokesView}"
-        Route="JokesView" />
+    Title="Dad Jokes"
+    ContentTemplate="{DataTemplate views:DadJokesView}"
+    Route="DadJokesView" />
+    </TabBar>
 
 </Shell>

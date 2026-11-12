@@ -24,10 +24,15 @@ namespace ChuckNorrisJokesApp
 #endif
             builder.Services.AddSingleton<IConfigurationService, ConfigurationService>();
             builder.Services.AddSingleton<IChuckNorrisApiService, ChuckNorrisApiHttpService>();
+            builder.Services.AddSingleton<IDadJokeApiService, DadJokeApiHttpService>();
             builder.Services.AddSingleton<IPopUps, MauiPopupService>();
 
             builder.Services.AddTransient<JokesView>();
             builder.Services.AddTransient<JokesViewModel>();
+
+            builder.Services.AddTransient<JokesView>();
+            builder.Services.AddTransient<DadJokesViewModel>();
+            builder.Services.AddTransient<DadJokesView>();
 
             return builder.Build();
         }

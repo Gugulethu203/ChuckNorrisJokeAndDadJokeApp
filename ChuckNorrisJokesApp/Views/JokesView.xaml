@@ -2,12 +2,47 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChuckNorrisJokesApp.Views.JokesView"
-             Title="JokesView">
-    <VerticalStackLayout>
+             Title="Jokes">
 
-        <Label Text="{Binding ChuckNorrisJoke}"/>
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Start">
 
-        <Button Text="Get Joke" Command="{Binding GetJokeCommand}" />
+            <Border
+                Stroke="#2196F3"
+                StrokeThickness="2"
+                Padding="20"
+                StrokeShape="RoundRectangle 15">
 
-    </VerticalStackLayout>
+                <VerticalStackLayout Spacing="15">
+
+                    <Label
+                        Text="Chuck Norris Joke"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="#2196F3"/>
+
+                    <Label
+                        Text="{Binding ChuckNorrisJoke}"
+                        FontSize="18"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        LineBreakMode="WordWrap"/>
+
+                    <Button
+                        Text="Get Chuck Norris Joke"
+                        Command="{Binding GetJokeCommand}"
+                        HorizontalOptions="Fill"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+         
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

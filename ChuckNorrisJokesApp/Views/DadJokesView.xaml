@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChuckNorrisJokesApp.Views.DadJokesView"
+             Title="Dad Jokes">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Start">
+
+            <Border
+                Stroke="#4CAF50"
+                StrokeThickness="2"
+                Padding="20"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="15">
+                    <Label
+                        Text="Dad Joke"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="#4CAF50" />
+
+                    <Label
+                        Text="{Binding DadJoke}"
+                        FontSize="18"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        LineBreakMode="WordWrap" />
+
+                    <Button
+                        Text="Get Dad Joke"
+                        Command="{Binding GetDadJokeCommand}"
+                        HorizontalOptions="Fill" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
